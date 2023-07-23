@@ -300,7 +300,7 @@ declare module 'jellyfin-apiclient' {
         updateUser(user: UserDto): Promise<void>;
         updateVirtualFolderOptions(id: string, libraryOptions?: any): Promise<void>;
         uploadItemImage(itemId: string, imageType: ImageType, file: File): Promise<void>;
-        uploadItemSubtitle(itemId: string, language: string, isForced: boolean, file: File): Promise<void>;
+        uploadItemSubtitle(itemId: string, language: string, isForced: boolean, isHearingImpaired: boolean, file: File): Promise<void>;
         uploadUserImage(userId: string, imageType: ImageType, file: File): Promise<void>;
     }
 

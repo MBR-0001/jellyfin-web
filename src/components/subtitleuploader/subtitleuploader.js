@@ -89,8 +89,9 @@ function onSubmit(e) {
     const dlg = dom.parentWithClass(this, 'dialog');
     const language = dlg.querySelector('#selectLanguage').value;
     const isForced = dlg.querySelector('#chkIsForced').checked;
+    const isHearingImpaired = dlg.querySelector('#chkIsHearingImpaired').checked;
 
-    ServerConnections.getApiClient(currentServerId).uploadItemSubtitle(currentItemId, language, isForced, file).then(function () {
+    ServerConnections.getApiClient(currentServerId).uploadItemSubtitle(currentItemId, language, isForced, isHearingImpaired, file).then(function () {
         dlg.querySelector('#uploadSubtitle').value = '';
         loading.hide();
         hasChanges = true;
